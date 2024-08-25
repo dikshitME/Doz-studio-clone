@@ -16,7 +16,7 @@ let imagesLoaded = 0;
 
 function preloadImages() {
   for (let i = 1; i <= frames.maxIndex; i++) {
-    const imageUrl = `./Images/frame_${i.toString().padStart(4, "0")}.jpeg`;
+    const imageUrl = `assets/Images/frame_${i.toString().padStart(4, "0")}.jpeg`;
     const img = new Image();
     img.src = imageUrl;
 
