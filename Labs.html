@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Le Lab | Doze Studio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <style>
+        .imagediv{
+            position: absolute;
+            width: 15vw;
+            height: 18vw;
+            overflow: hidden;
+        }
+        .imagediv img{
+           transform: translateY(0%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="1 relative w-full h-screen overflow-x-hidden ">
+        <div class="Navbar absolute top-[2vw]  flex justify-between gap-[7vw] left-[3vw] ">
+            <h1 class="text-[2vw] font-bold">DOZE STUDIO</h1>
+            <a  href="./index.html"  class="text-[1vw] mt-[0.8vw] font-semibold ml-[10vw]">PROJECTS</a>
+            <a href="aboutUs.html" class="text-[1vw] mt-[0.8vw] font-semibold ml-[1vw]">ABOUT US</a>
+            <a href="./Labs.html" class="text-[1vw] mt-[0.8vw] font-semibold ml-[1vw]">LABS</a>
+        </div>
+        <div id="center" class="w-[85vw] h-[35vw] pl-[28vw] pt-[12vw] translate-x-[7vw]  translate-y-[8vw] ">
+        <h1 class="text-[5.5vw] font-bold ">Laboratary</h1>
+    </div>
+    </div>
+    <div class="2 w-full ">
+        <div class="labs_gallery flex flex-col gap-[1vw]">
+            <div class="  ml-[75vw]">
+                <video autoplay muted loop class="w-[25vw] h-[20vw]" src="./Videos/Labs-1.mp4"></video>
+            </div>
+            <div class="">
+                <video autoplay muted playsinline preload="auto" loop class="w-[35vw] h-[40vw]" src="./Videos/Labs-2.mp4"></video>
+            </div>
+            <div>
+                <video loop autoplay playsinline preload="auto"  muted class="w-[35vw] h-[55vw] ml-[50vw] mt-[2vw]" src="./Videos/Labs-3.mp4"></video>
+            </div>
+            <div>
+                <video loop autoplay playsinline preload="auto"  muted class="w-[30vw] h-[40vw] ml-[10vw] mt-[-5vw]" src="./Videos/Labs-4.mp4"></video>
+            </div>
+            <div>
+                <img  class="w-[30vw] h-[40vw] ml-[55vw] mt-[2vw]" src="./Videos/Labs-7.jpg"></img>
+            </div>
+            <div>
+                <video loop autoplay playsinline preload="auto"  muted class="w-[30vw] h-[30vw] ml-[2vw] mt-[5vw] " src="./Videos/Labs-6.mp4"></video>
+            </div>
+            <div >
+                <video loop muted playsinline preload="auto"  autoplay class="h-[40%] w-[50%] mt-[5vw]  ml-[45vw]" src="./Videos/Labs-8.mp4"></video>
+            </div>
+            <div>
+                <video  loop muted playsinline preload="auto"  autoplay class="ml-[30vw] h-[35%] w-[40%] mb-[5vw] mt-[10vw] " src="./Videos/Labs-13.mp4"></video>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full mt-[1vw] h-[25vw] bg-[black] pt-[1vw] text-white flex  justify-between bottom-[1vw]">
+        <div class="left ml-[2vw] flex flex-col gap-[5vw] ">
+          <div class="top">
+              <h1 class="text-[2vw]">PROJECT INQUERES</h1>
+              <h2 class="text-[1.2vw]">Ready to Work with us?</h2>
+              <p class="text-[0.8vw]">Reach out to discuss how we can help you build a strong digital brand <br>presence.</p>
+          </div>
+          <div class="bottom">
+          <h1 class="text-[1.5vw]">OUR OFFICE</h1>
+          <h2 class="text-[0.9vw]">Doze Studio <br>1b rue Baron <br>44 000 Nantes <br>France</h2>
+          </div>
+        </div>
+        <div class="right">
+          <h2 class="text-[2vw] m-[3vw]">LEGALS</h2>
+          <h1 class="text-[1.5vw] ml-[3vw]">NETWORKS</h1>
+          <h1 class="text-[1vw] ml-[3vw]">+33-285-XYZ-625</h1>
+        </div>
+      </footer>
+    <script>
+       
+ const center = document.querySelector("#center");
+
+let images = [
+    "https://api.doze.studio/uploads/PISTE_02_MACRO_03_0e6b0e3a09.png",
+    "https://api.doze.studio/uploads/sticker01_6dd591770a.png",
+    "https://api.doze.studio/uploads/medium_master02_f6cf8fcf36.png",
+    "https://api.doze.studio/uploads/large_City_Appartement_345220bfee.png",
+    "https://api.doze.studio/uploads/medium_nope_bc52ea9af8.png",
+    "https://api.doze.studio/uploads/large_test0097_67c34c2682.png",
+    "https://api.doze.studio/uploads/medium_347130818_684033873733178_306436484325829112_n_4536bd771c.jpg",
+    "https://api.doze.studio/uploads/470d134d24260170921bfeae444203d7_7c033d1d58.png",
+    "https://api.doze.studio/uploads/large_test0097_67c34c2682.png",
+    "https://api.doze.studio/uploads/medium_299497930_332624892330120_493858987872348414_n_f524056d45.jpg",
+    "https://api.doze.studio/uploads/medium_346723312_915319699771976_8245216330374664260_n_e94a3f9627.jpg",
+    "https://api.doze.studio/uploads/medium_emperor_scorpion_pandinus_imperator_black_scorpion_isolated_on_transparent_background_file_png_2eca0817d2.webp",
+    "https://team-nkg-reimagine-round1.vercel.app/assets/4-BSIRUxU8.webp",
+    "https://images.unsplash.com/photo-1633643092028-b66187af7d47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fDNkfGVufDB8fDB8fHww",
+    "https://plus.unsplash.com/premium_photo-1683887064255-1c428d0b3934?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fDNkfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1663851360815-784f3ba447f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fDNkJTIwaWxsdXN0cmF0aW9uc3xlbnwwfHwwfHx8MA%3D%3D",
+
+];
+
+
+let imageQueue = shuffleArray([...images]);
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+const getNextImage = () => {
+    if (imageQueue.length === 0) {
+        imageQueue = shuffleArray([...images]); 
+    }
+    return imageQueue.shift(); 
+};
+
+const throttleFunction = (func, delay) => {
+    let prev = 0;
+    return (...args) => {
+        const now = Date.now();
+        if (now - prev > delay) {
+            prev = now;
+            return func(...args);
+        }
+    };
+};
+
+center.addEventListener(
+    "mousemove",
+    throttleFunction((dets) => {
+        var div = document.createElement("div");
+        div.classList.add("imagediv");
+        div.style.left = dets.clientX + 'px';
+        div.style.top = dets.clientY + 'px';
+
+        var img = document.createElement("img");
+        img.setAttribute("src", getNextImage()); 
+        div.appendChild(img);
+
+        document.body.appendChild(div);
+
+        gsap.fromTo(img, {
+            y: -200
+        }, {
+            y: 0,
+            duration: 1.5,
+            ease: "power3.out"
+        });
+
+        setTimeout(() => {
+            div.remove();
+        }, 900);
+    }, 70)
+);
+
+    </script>
+
+</body>
+</html>
