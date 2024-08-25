@@ -1,8 +1,4 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
-import Lenis from 'lenis'
 
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
